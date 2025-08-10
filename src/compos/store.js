@@ -13,9 +13,14 @@ export const tmslice = createSlice({
         },
         clrs:(state) => {
             state.tasks = [];
+        },
+        remove:(state,action) => {
+            const rct = state.tasks.find((tm) => tm.id==action.payload)
+            let index = state.tasks.indexOf(rct);
+            state.tasks.splice(index,1)
         }
     }
 })
 
-export const {addtsk,clrs} = tmslice.actions
+export const {addtsk,clrs,remove} = tmslice.actions
 export const tmworker = tmslice.reducer

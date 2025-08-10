@@ -5,6 +5,7 @@ import { useState } from 'react'
 import { useRef } from 'react'
 import { addtsk,clrs } from './store'
 import { useEffect } from 'react'
+import { Link } from 'react-router-dom'
 
 export const Home = () => {
     const [newtask, setnewtask] = useState('')
@@ -49,10 +50,11 @@ export const Home = () => {
                 <div>
                     <center>
                         {mytasks.map((tk) =>
-                        (<div key={tk.id}>
-                            <span>{tk.task}</span>
+                        (<Link to={`/${tk.id}`} key={tk.id}>
+                            <span>{tk.task.slice(0,2)+'........'}</span>
                             <span>{tk.timethen}</span>
-                        </div>)
+                            <br></br>
+                        </Link>)
                         )}
                     </center>
                 </div>
