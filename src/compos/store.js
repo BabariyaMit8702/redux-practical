@@ -10,9 +10,12 @@ export const tmslice = createSlice({
     reducers:{
         addtsk:(state,action) => {
             state.tasks.push(action.payload)
+        },
+        clrs:(state) => {
+            state.tasks = [];
         }
     }
 })
 
-export const {addtsk} = tmslice.actions
+export const {addtsk,clrs} = tmslice.actions
 export const tmworker = tmslice.reducer

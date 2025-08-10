@@ -3,12 +3,11 @@ import { useSelector, useDispatch } from 'react-redux'
 import '../App.css'
 import { useState } from 'react'
 import { useRef } from 'react'
-import { addtsk } from './store'
+import { addtsk,clrs } from './store'
 import { useEffect } from 'react'
 
 export const Home = () => {
     const [newtask, setnewtask] = useState('')
-    const [count1, setcount1] = useState(0)
     const dispatch = useDispatch()
     const mytasks = useSelector((state) => state.for_data.tasks)
     const inp = useRef(null);
@@ -25,11 +24,9 @@ export const Home = () => {
             localStorage.setItem('mydata', JSON.stringify(arr));
         }
         the(mytasks)
-    }, [mytasks,count1])
+    }, [mytasks])
     const clrscr = () => {
-        let newone = count1+1;
-        localStorage.clear();
-        setcount1(newone);
+        dispatch(clrs())
     }
 
     return (
