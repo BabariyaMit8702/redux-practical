@@ -1,13 +1,12 @@
 import './App.css'
 import React from 'react'
+import { Home } from './compos/home'
+
 
 function App() {
-
   return (
     <>
-      <center>
-        THE TASK MANAGEMENT APP
-        </center>
+      <Home/>
     </>
   )
 }
