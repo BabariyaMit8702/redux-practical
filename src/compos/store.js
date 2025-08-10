@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 // new Date().toLocaleString
 const initialState = {
-    tasks : [],
+    tasks : localStorage.getItem('mydata') == null ? [] : JSON.parse(localStorage.getItem('mydata')),
 }
 
 export const tmslice = createSlice({
