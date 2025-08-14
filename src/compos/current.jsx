@@ -17,8 +17,16 @@ export const Current = () => {
 
   return (
     <>
-      <div className='bg-black text-blue-500 text-2xl h-150'>
-        <div><span>{cur_t.task}</span><br></br><span>{cur_t.timethen}</span></div>
+      <div className='bg-black text-blue-500 text-2xl h-150 flex items-center flex-col'>
+        <div className='border-double-red-50-2xl'>
+          <span>
+            {cur_t.task}
+          </span>
+          <br></br>
+          <span>
+            {cur_t.timethen}
+          </span>
+        </div>
         <br></br>
         <button onClick={rmv} className=' text-red-600 '>
           remove this task
