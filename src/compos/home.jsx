@@ -32,11 +32,12 @@ export const Home = () => {
 
     return (
         <>
+        <div className='h-screen bg-black'>
             <center>
-                <div>
+                <div className='bg-blue-300'>
                     <div className="d-flex" role="search">
-                        <input ref={inp} className="form-control me-2" type="text" value={newtask} onChange={(e) => setnewtask(e.target.value)} placeholder="write here" />
-                        <button onClick={() => { oncemt(); }} className="btn btn-primary">
+                        <input ref={inp} className="form-control me-2 m-2 " type="text" value={newtask} onChange={(e) => setnewtask(e.target.value)} placeholder="write here" />
+                        <button onClick={() => { oncemt(); }} className="btn btn-primary p-0 text-[10px]">
                             Add Task
                         </button>
                         <button onClick={clrscr}>
@@ -58,6 +59,7 @@ export const Home = () => {
                         )}
                     </center>
                 </div>
+            </div>
             </div>
         </>
     )

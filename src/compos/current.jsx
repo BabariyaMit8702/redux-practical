@@ -17,18 +17,18 @@ export const Current = () => {
 
   return (
     <>
-      <div className='bg-black text-blue-500 text-2xl h-150 flex items-center flex-col'>
-        <div className='border-double-red-50-2xl'>
+      <div className='bg-black text-blue-500 text-2xl h-150 flex items-center justify-center'>
+        <div className='border-2 p-2'>
           <span>
             {cur_t.task}
           </span>
           <br></br>
-          <span>
+          <span className='text-amber-300'>
             {cur_t.timethen}
           </span>
         </div>
         <br></br>
-        <button onClick={rmv} className=' text-red-600 '>
+        <button onClick={rmv} className=' text-red-600 border-2 p-1.5 m-3 hover:text-white hover:text-shadow-inner-amber-600 hover:text-shadow-2xs '>
           remove this task
         </button>
       </div>
