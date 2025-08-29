@@ -37,10 +37,10 @@ export const Home = () => {
                 <div className='bg-blue-300'>
                     <div className="d-flex" role="search">
                         <input ref={inp} className="form-control me-2 m-2 " type="text" value={newtask} onChange={(e) => setnewtask(e.target.value)} placeholder="write here" />
-                        <button onClick={() => { oncemt(); }} className="btn btn-primary p-0 text-[10px]">
+                        <button onClick={() => { oncemt(); }} className="btn btn-primary p-0.5 text-[10px] m-3">
                             Add Task
                         </button>
-                        <button onClick={clrscr}>
+                        <button onClick={clrscr} className='btn btn-primary p-0.5 m-3'>
                             Clear All
                         </button>
                     </div>
@@ -51,10 +51,12 @@ export const Home = () => {
                 <div>
                     <center>
                         {mytasks.map((tk) =>
-                        (<Link to={`/${tk.id}`} key={tk.id}>
+                        (<Link  to={`/${tk.id}`} key={tk.id}>
+                            <span className='bg-yellow-400 p-3 border-2 border-amber-700'>
                             <span>{tk.task.slice(0,2)+'........'}</span>
                             <span>{tk.timethen}</span>
-                            <br></br>
+                            </span>
+                            <br></br><br></br><br></br><br></br>
                         </Link>)
                         )}
                     </center>
